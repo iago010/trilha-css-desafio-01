@@ -1,0 +1,247 @@
+@import url('reset.css');
+
+/* Definir a cor de fundo da página para preto */
+body {
+    background-color: black;
+}
+
+/* Definir o estilo dos elementos <h2> da seguinte forma:
+- Tamanho da fonte: 2 rem (unidades relativas ao tamanho da fonte do elemento pai)
+- Cor: #33A8DB (azul claro)
+- Peso da fonte: negrito
+- Espaçamento entre letras: 4 pixels
+- Transformação de texto: maiúsculas
+- Margem inferior: 24 pixels */
+h2 {
+    font-size: 2rem;
+    color: #33A8DB;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+/* Definir a cor do texto de todos os elementos <p> para branco. */
+p {
+    color: white;
+}
+
+/* Centralizar horizontalmente todos os elementos section na página.
+A propriedade margin define a quantidade de espaço ao redor de um elemento. 
+A propriedade auto indica que o navegador deve calcular automaticamente 
+a margem esquerda e direita do elemento de forma que ele fique centralizado horizontalmente. */
+section {
+    margin: 100px auto;
+}
+
+/* Criar um banner com as seguintes características (header é usado para definir o cabeçalho de uma página):
+- Background image: uma imagem linear gradiente com três cores: preto semiopaco, 
+azul claro transparente e preto semiopaco novamente. A imagem de fundo também inclui uma imagem PNG chamada banner.png.
+- Background size: cover, o que significa que a imagem de fundo irá preencher todo o espaço disponível, mas manterá sua proporção.
+- Background repeat: no-repeat, o que significa que a imagem de fundo não será repetida.
+- Height: 600 pixels.
+- Padding-top: 60 pixels, o que significa que haverá um espaço de 60 pixels entre a parte superior do banner e seu conteúdo.
+- Border-bottom: 1px solid #33A8DB80, o que significa que haverá uma borda sólida de 1 pixel na parte inferior do banner, 
+com a cor azul claro semiopaco. */
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6)), url('../images/banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    padding-top: 60px;
+    border-bottom: 1px solid #33A8DB80;
+  }
+
+/* Definir o estilo do elemento .banner-content dentro do elemento .banner.*/
+.banner .banner-content {
+    color: white;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+
+/* Definir o estilo do elemento <h1> dentro do elemento .banner.
+O clip de fundo do texto irá garantir que o gradiente seja exibido apenas no texto, e não no fundo do elemento <h1>. */
+.banner h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: transparent;
+    background: -webkit-linear-gradient(#33A8DB, #1472B7);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+/* Definir o estilo do elemento <p> dentro do elemento .banner.
+Tamanho da fonte: 1.25rem (unidades relativas ao tamanho da fonte do elemento pai)
+Margem: 16px na parte superior e inferior, e 24px à esquerda e à direita */
+.banner p {
+    font-size: 1.25rem;
+    margin: 16px 0 24px;
+}
+
+/* Estilizar o elemento .logo dentro do elemento .banner da seguinte forma:
+- background-color: rgba(0, 0, 0, .2): Isso irá definir a cor de fundo do logotipo para preto com 20% de transparência.
+- height: 260px: Isso irá definir a altura do logotipo para 260px.
+- width: 260px: Isso irá definir a largura do logotipo para 260px.
+- margin: auto: Isso irá centralizar o logotipo horizontalmente.
+- border-radius: 50%; Isso irá arredondar os cantos do logotipo para 50%.
+- padding: 16px: Isso irá adicionar 16px de preenchimento ao logo em todos os lados.
+- margin-bottom: 16px: Isso irá adicionar 16px de margem inferior ao logotipo.*/
+.banner .logo {
+    background-color: rgba(0, 0, 0, .2);
+    height: 260px;
+    width: 260px;
+    margin: auto;
+    border-radius: 50%;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+/* Estilizar o elemento img dentro da classe .logo dentro da classe .banner.
+- margin: auto: Isso irá centralizar a imagem horizontalmente.
+- width: 100%; height: 100%; Isso irá redimensionar a imagem para caber na largura e altura do seu contêiner.
+- object-fit: contain: Isso garantirá que a imagem esteja totalmente contida dentro de seu contêiner, sem cortes ou alongamentos*/
+.banner .logo img {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Estilizar o elemento button dentro da classe .banner-content dentro da classe .banner.
+O botão será azul claro, com texto negrito em letras maiúsculas e um espaçamento entre as letras de 4px. 
+Ele terá um preenchimento de 16px na parte superior e inferior, e 32px à esquerda e à direita. 
+O fundo do botão será transparente e sua borda terá um gradiente linear de azul claro para azul escuro. 
+Os cantos do botão serão arredondados com um raio de 30px. */
+.banner .banner-content button {
+    color: #31A8DD;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 16px 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background-color: transparent;
+    border-image: linear-gradient(#3BA1CD, #1572B7);
+    border-image-slice: 10;
+    border-radius: 30px;
+}
+
+/* Estilizar o elemento #course-content da seguinte forma:
+- width: 800px: Isso irá definir a largura do elemento para 800px.
+- text-align: center: Isso irá centralizar o texto no elemento.*/
+#course-content {
+    width: 800px;
+    text-align: center;
+  }
+
+/* Definir a margem do elemento .modules-list dentro do elemento #course-content.*/
+#course-content .modules-list {
+    margin: 24px 0;
+}
+
+/* Estilizar o elemento .module dentro da classe .modules-list dentro do elemento #course-content.
+- color: white: Isso irá definir a cor do texto do módulo para branco.
+- width: 530px: Isso irá definir a largura do módulo para 530 pixels.
+- margin: 0 auto 24px: Isso irá centralizar o módulo horizontalmente e dar-lhe uma margem de 24px na parte superior e inferior.
+- border: 1px solid #33A8DB: Isso irá dar ao módulo uma borda sólida de 1px com a cor #33A8DB.
+- background-color: #252525: Isso irá definir a cor de fundo do módulo para #252525.
+- padding: 16px: Isso irá dar ao módulo 16px de preenchimento em todos os lados.
+- border-radius: 100px: Isso irá arredondar os cantos do módulo com um raio de 100px.
+- box-shadow: inset -5px 6px 8px rgba(0, 0, 0, .7): Isso irá dar ao módulo uma sombra com um deslocamento horizontal de -5px, 
+um deslocamento vertical de 6px, um raio de desfoque de 8px e uma cor de 70% preto.*/
+#course-content .modules-list .module {
+    color: white;
+    width: 530px;
+    margin: 0 auto 24px;
+    border: 1px solid #33A8DB;
+    background-color: #252525;
+    padding: 16px;
+    border-radius: 100px;
+    box-shadow: inset -5px 6px 8px rgba(0, 0, 0, .7);
+}
+
+/* Definir a cor do elemento span dentro do elemento .module dentro da classe .modules-list dentro do elemento #course-content.
+O elemento span é usado para agrupar texto dentro de um parágrafo ou bloco de texto. 
+Isso pode ser útil para estilizar o texto de uma maneira específica, como alterar a cor, o tamanho ou o estilo da fonte.
+O código CSS acima irá definir a cor do texto no elemento span para azul claro.*/
+#course-content .modules-list .module span {
+    color: #33A8DB;
+} 
+
+/* Estilizar o elemento #transform-world da seguinte forma:
+- height: 560px: Esta propriedade irá definir a altura do elemento para 560 pixels.
+- background-size: cover: Esta propriedade irá definir o tamanho do fundo do elemento para cobrir todo o elemento, 
+mantendo a proporção da imagem original.
+- background-image: url("../images/woman-code.png"); Esta propriedade irá definir a imagem de fundo do elemento para a 
+imagem woman-code.png, que está localizada na pasta images.
+- background-attachment: fixed: Esta propriedade irá fixar a imagem de fundo do elemento no lugar, para que ela não role com a página.
+- border-top: 1px solid #33A8DB80: Esta propriedade irá adicionar uma borda sólida de 1px na parte superior do elemento, com a cor #33A8DB80.
+- border-bottom: 1px solid #33A8DB80: Esta propriedade irá adicionar uma borda sólida de 1px na parte inferior do elemento, com a cor #33A8DB80.
+- padding: 200px: Esta propriedade irá adicionar um preenchimento de 200 pixels em todos os lados do elemento.*/
+#transform-world {
+    height: 560px;
+    background-size: cover;
+    background-image: url("../images/woman-code.png");
+    background-attachment: fixed;
+    border-top: 1px solid #33A8DB80;
+    border-bottom: 1px solid #33A8DB80;
+    padding: 200px;
+}
+
+/* Estilizar os elementos p dentro do elemento #transform-world.
+- font-weight: 900: Isso irá definir o peso da fonte do parágrafo para negrito.
+- font-size: 2.5rem: Isso irá definir o tamanho da fonte do parágrafo para 2.5rem (unidades relativas ao tamanho da fonte do elemento pai).
+- text-transform: lowercase: Isso irá converter o texto do parágrafo para letras minúsculas.
+- max-width: 250px: Isso irá definir a largura máxima do parágrafo para 250 pixels.
+- text-shadow: 3px 2px #33A8DB: Isso irá adicionar uma sombra ao texto do parágrafo, com um deslocamento horizontal de 3px, 
+um deslocamento vertical de 2px e a cor #33A8DB.*/
+#transform-world p {
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-transform: lowercase;
+    max-width: 250px;
+    text-shadow: 3px 2px #33A8DB;
+}
+
+/* Estilizar o elemento #professional-challenges da seguinte forma:
+- text-align: center: Esta propriedade irá centralizar o texto do elemento.
+- width: 800px: Esta propriedade irá definir a largura do elemento para 800 pixels.*/
+#professional-challenges {
+    text-align: center;
+    width: 800px;
+}
+
+/* Estilizar todos os elementos img dentro do elemento #professional-challenges.
+A propriedade margin define a quantidade de espaço ao redor de um elemento. */
+#professional-challenges img {
+    margin: 32px 0;
+}
+
+/* Estilizar o elemento footer (footer é o rodapé, é uma seção de uma página web que é exibida na parte inferior da página):
+- padding: 60px 0: Isso irá adicionar 60px de preenchimento à parte superior e inferior do rodapé.
+- text-align: center: Isso irá centralizar o texto no rodapé.
+- background-image: linear-gradient(rgba(50, 168, 219, .0), rgba(50, 168, 219, .2));: 
+Isso irá adicionar um fundo gradiente linear ao rodapé, de 0% de transparência para 20% de opacidade #32ABDD.
+- border-top: 1px solid #33A8DB80: Isso irá adicionar uma borda sólida de 1px #33A8DB80 à parte superior do rodapé.*/
+footer {
+    padding: 60px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(50, 168, 219, .0), rgba(50, 168, 219, .2));
+    border-top: 1px solid #33A8DB80;
+  }
+
+/* definir a largura do elemento .dio-logo dentro do elemento footer para 300px.*/
+footer .dio-logo {
+    width: 300px;
+}
+
+/* Estilizar todos os elementos a dentro do elemento footer da seguinte forma:
+- color: #33A8DB: Isso irá definir a cor dos links para #33A8DB.
+- font-weight: bold: Isso irá tornar os links em negrito.
+- text-decoration: none: Isso irá remover a sublinhado dos links.*/
+footer a {
+    color: #33A8DB;
+    font-weight: bold;
+    text-decoration: none;
+}
